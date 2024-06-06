@@ -2,7 +2,7 @@ function getImages(){
     console.log("load images properly");
     images = {
         jaySprite: [loadImage("./assets/sprites/bluejayspriteleft.png"), loadImage("./assets/sprites/bluejaysprite.png")],
-        jayFlight1:[loadImage("./assets/sprites/bluejayflight1left.png"), loadImage("./bluejayflight1.png")],
+        jayFlight1:[loadImage("./assets/bluejayflight1left.png"), loadImage("./bluejayflight1.png")],
         jayFlight2:[loadImage("./assets/sprites/bluejayflight2left.png"), loadImage("./assets/sprites/bluejayflight2.png")],
         
         hawkFlight1:[loadImage("./assets/sprites/hawkflight1left.png"), loadImage("./assets/sprites/hawkflight1.png")],
