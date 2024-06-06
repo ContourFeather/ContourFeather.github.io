@@ -1,4 +1,5 @@
 function getImages(){
+    console.log("load images");
     images = {
         jaySprite: [loadImage("./assets/sprites/bluejayspriteleft.png"), loadImage("./assets/sprites/bluejaysprite.png")],
         jayFlight1:[loadImage("./assets/sprites/bluejayflight1left.png"), loadImage("./assets/sprites/bluejayflight1.png")],
