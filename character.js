@@ -437,6 +437,7 @@ function createCharacter(){
         // re-do stats
         jay.health = jay.maxHealth;
         jay.hunger = 100;
+        jay.energy = jay.maxEnergy;
         jay.bodyTemperature = 100;
         jay.hawksEscaped = 0;
 
