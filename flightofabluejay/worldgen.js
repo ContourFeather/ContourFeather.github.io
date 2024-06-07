@@ -205,7 +205,7 @@ function generateWorld(){
         if(this.skippingNight){
 
             // stop skipping if conditions are no longer met
-            if(this.isDay() || !jay.inNest || hawks.legnth > 0){
+            if((this.isDay() && !this.skipTransition >= FPS * 5) || !jay.inNest || hawks.legnth > 0){
                 this.skippingNight = false;
                 this.skipTransition = 0;
                 return;
@@ -217,9 +217,12 @@ function generateWorld(){
             if(this.skipTransition < FPS*5){
                 opacity = (this.skipTransition / (FPS * 5)) * 255;
             } else{
-                world.time = FPS * 60 * (world.dayRange[0] + 1);
-                world.meridian = "a";
+                if(!world.isDay()){
+                    world.time = FPS * 60 * (world.dayRange[0] + 1);
+                    world.meridian = "a";
+                }
                 opacity = ((FPS * 5) / this.skipTransition) * 255;
+                jay.energy = jay.maxEnergy;
             }
             background(0, 0, 0, opacity);
             
@@ -236,7 +239,7 @@ function generateWorld(){
                 world.meridian = "a";
                 console.log("skip");
                 this.skippingNight = false;
-                jay.energy = jay.maxEnergy;
+                this.skipTransition = 0;
             }
         }
     };
@@ -268,6 +271,4 @@ function generateWorld(){
         stroke(0);
        
     };
-
-
 }
