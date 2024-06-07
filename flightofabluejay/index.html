@@ -11,7 +11,7 @@
     </head>
     <body>
         <h1>Flight of a Blue Jay</h1>
-        <span>Beta Test 1.0.0.</span>
+        <span>Beta Test 1.1.0.</span>
         
         <h2>Controls</h2>
         <ul>
@@ -173,7 +173,9 @@
                     world.draw();
                     world.setTemperature();
 
-                    jay.hop();
+                    if(!world.skippingNight){
+                        jay.hop();
+                    }
                     jay.fly();
                     jay.move();
                     jay.land();
@@ -287,7 +289,7 @@
             https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations/programming-noise/a/two-dimensional-noise
             https://p5js.org/reference/#/p5/frameRate
             https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations/programming-vectors/a/interactive-vector-motion
-            https://p5js.org/reference/#/p5.Element/doubleClicked
+
             https://p5js.org/reference/#/p5.Vector
             https://www.khanacademy.org/computing/computer-programming/programming-natural-simulations/programming-noise/a/perlin-noise
 
