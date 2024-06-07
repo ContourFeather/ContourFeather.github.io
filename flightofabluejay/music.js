@@ -10,12 +10,12 @@ function getMusic(){
 
     music = document.createElement("audio");
     function startMusic(){
-        music.src = soundTrack.day;
-        music.play();
+        /*music.src = soundTrack.day;
+        music.play();*/
     }
 
     switchTrack = function(track, instantly){
-        if(music.ended){
+        /*if(music.ended){
             music.load();
             music.src = track;
             music.play();
@@ -24,12 +24,12 @@ function getMusic(){
             music.load();
             music.src = track;
             music.play();
-        }
+        }*/
 
     };
 
     chooseTrack = function(){
-        let src;
+        /*let src;
         if(hawks.legnth > 0){
             src = soundTrack.hawks;
         } else if(jay.flying && random(1) > 0.7){
@@ -39,12 +39,12 @@ function getMusic(){
         } else{
             src = soundTrack.night;
         }
-        return src;
+        return src;*/
     }
 
     nextSoundTrack = function(){
-        let desiredTrack = chooseTrack();
-        switchTrack(desiredTrack);
+        /*let desiredTrack = chooseTrack();
+        switchTrack(desiredTrack);*/
         
     };
     startMusic();
