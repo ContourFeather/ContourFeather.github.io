@@ -235,9 +235,7 @@ function generateWorld(){
             this.health++;
 
             if(this.skipTransition > FPS * 10){
-                world.time = FPS * 60 * (world.dayRange[0] + 1.5);
-                world.meridian = "a";
-                console.log("skip");
+                console.log(world.findHour())
                 this.skippingNight = false;
                 this.skipTransition = 0;
             }
