@@ -451,6 +451,8 @@ function createCharacter(){
         jay.gameOverFade = 0;
         jay.gameResult = "n/a";
         jay.gameOverTransisionDone = false;
+
+        switchTrack(chooseTrack());
     };
 
     jay.updateStats = function(){
@@ -503,6 +505,11 @@ function createCharacter(){
         this.energy-=1 / FPS / difference;
         this.hunger-=1 / FPS / difference;
 
+
+        // lose i-frames
+        if(jay.iFrames > 0){
+            jay.iframes--;
+        }
     };
 
     
