@@ -9,10 +9,6 @@ function getMusic(){
     };
 
     music = document.createElement("audio");
-    function startMusic(){
-        music.src = soundTrack.day;
-        music.play();
-    }
 
     switchTrack = function(track, instantly){
         if(music.ended){
