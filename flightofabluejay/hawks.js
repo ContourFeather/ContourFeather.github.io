@@ -138,14 +138,9 @@ function createHawks(){
     };
     
     Hawk.prototype.attack = function(){
-        if(jay.Iframes <= 0){
-            if(dist (this.position.x, this.position.y, jay.position.x, jay.position.y) < 50){
-                jay.health--;
-                jay.Iframes = 60 * 3;
-            }
-
-        } else if(jay.Iframes > 0){
-            jay.Iframes--;
+        if(jay.Iframes <= 0 && dist (this.position.x, this.position.y, jay.position.x, jay.position.y) < 50){
+            jay.health--;
+            jay.Iframes = 60 * 3;
         }
     };
 
