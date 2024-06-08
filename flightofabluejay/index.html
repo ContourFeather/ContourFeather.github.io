@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Flight of a Blue Jay</title>
+        <link rel="icon" type="image/x-icon" href="./assets/Sprites/bluejayflight1.png">
         <style>
             canvas{
                 border: 6px solid black;
@@ -11,7 +12,7 @@
     </head>
     <body>
         <h1>Flight of a Blue Jay</h1>
-        <span>Beta Test 1.1.3.</span>
+        <span>Beta Test 1.1.4.</span>
         
         <h2>Controls</h2>
         <ul>
@@ -254,8 +255,12 @@
                     }
                 } else{
                     jay.gamePlaying = true;
+
+                    
                     if(jay.gameOverTransisionDone){
                         jay.reset();
+                    } else{
+                        switchTrack(soundTrack.day, true);
                     }
                 }
             }
