@@ -1,10 +1,10 @@
 function getMusic(){
     soundTrack = {
-        day: "./assets/music/Snowy Day.wav",
-        night: "./assets/music/Snowy Night.WAV",
-        foodCaching: "./assets/music/Food cache song.wav",
-        hawks: "./assets/music/Birds Of Prey.wav",
-        victory: "./assets/music/Victory Song.wav"
+        day: "./assets/Music/Snowy Day.wav",
+        night: "./assets/Music/Snowy Night.WAV",
+        foodCaching: "./assets/Music/Food cache song.wav",
+        hawks: "./assets/Music/Birds Of Prey.wav",
+        victory: "./assets/Music/Victory Song.wav"
 
     };
 
