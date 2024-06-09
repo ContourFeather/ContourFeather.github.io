@@ -177,17 +177,21 @@ function createHawks(){
             if(attempt && random(1) < 1/FPS/60){
                 console.log("spawn hawk")
                 let frame = world.xRangeInFrame();
-                hawks.push(new Hawk(random(frame[0], frame[1]), jay.position.y - height/2))
+                let x = frame[0] - 200;
+                if(random(1) > 0.5){
+                    x = frame[1] + 200;
+                }
+                hawks.push(new Hawk(x, jay.position.y - height/2))
             }
         }
     }
 
-    onKeyPress.push(function(){
+    /*onKeyPress.push(function(){
         if(key === "p"){
             hawks.push(new Hawk(jay.position.x+1, jay.position.y - 100));
             console.log("hawk")
         }
-    })
+    })*/
 
     hawks = [];
     runHawks = function(){
