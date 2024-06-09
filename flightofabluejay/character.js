@@ -507,8 +507,8 @@ function createCharacter(){
 
 
         // lose i-frames
-        if(jay.iFrames > 0){
-            jay.iframes--;
+        if(jay.Iframes > 0){
+            jay.Iframes--;
         }
     };
 
