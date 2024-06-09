@@ -57,12 +57,12 @@ function generateWorld(){
     }
 
 
-    world.jumpHour = function(){
+    /*world.jumpHour = function(){
         if(key === "h"){
             world.time+=world.hourLen;
         }
     }
-    onKeyPress.push(world.jumpHour) 
+    onKeyPress.push(world.jumpHour) */
 
     world.isDay = function(){
         let hour = floor(this.findHour());
@@ -269,4 +269,6 @@ function generateWorld(){
         stroke(0);
        
     };
+
+
 }
